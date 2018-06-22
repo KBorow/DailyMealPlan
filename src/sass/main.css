@@ -1,0 +1,353 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script&subset=latin-ext");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
+@-webkit-keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1; }
+  25%,
+  75% {
+    opacity: 0; } }
+
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1; }
+  25%,
+  75% {
+    opacity: 0; } }
+
+.flash {
+  -webkit-animation-name: flash;
+  animation-name: flash; }
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp; }
+
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 10px; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-image: url("../images/background2.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center; }
+
+.container {
+  margin: 0 auto;
+  width: 80vw;
+  max-width: 105rem; }
+
+button:focus {
+  outline: 0; }
+
+#main .explanation {
+  width: 59rem;
+  margin: 5rem auto;
+  margin-top: 15rem;
+  position: relative; }
+  #main .explanation blockquote {
+    width: 565px;
+    font: 2.65em CallunaRegular;
+    letter-spacing: .075em;
+    padding: 45px 0 30px 25px;
+    margin: 0;
+    border-top: 2px dotted white;
+    border-bottom: 2px dotted white;
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    color: #FF8C00; }
+    #main .explanation blockquote:first-line {
+      font: 1.85em "Sketch Block";
+      color: #fff79e; }
+    #main .explanation blockquote:first-letter {
+      font-size: 2.9em;
+      text-transform: lowercase;
+      float: left;
+      line-height: .52em;
+      margin-right: -18px;
+      position: relative;
+      z-index: 1; }
+    #main .explanation blockquote strong:first-child {
+      margin-left: 8px;
+      letter-spacing: 0; }
+    #main .explanation blockquote strong:last-child {
+      font: 2em "Museo 700";
+      text-transform: uppercase;
+      letter-spacing: 0; }
+    #main .explanation blockquote em {
+      border-bottom: 2px dotted white; }
+  #main .explanation:before {
+    content: "“";
+    font-size: 13em;
+    position: absolute;
+    left: -100px;
+    color: white; }
+  #main .explanation:after {
+    content: "”";
+    font-size: 13em;
+    position: absolute;
+    right: -100px;
+    top: 150px;
+    color: white; }
+
+#main .generator-header {
+  margin-top: 5rem; }
+
+#main .generator-top {
+  height: 43rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.9rem;
+  margin: 0 auto;
+  width: 80vw;
+  max-width: 105rem; }
+
+#main .diet-type {
+  margin-bottom: 4rem; }
+
+#main ul {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-around; }
+  #main ul li {
+    list-style-type: none;
+    height: 18rem;
+    width: 18rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    font-size: 1.5rem; }
+    #main ul li .img-menu-standard {
+      background-image: url("../images/standard.png");
+      background-size: cover;
+      background-position: center;
+      width: 15rem;
+      height: 15rem; }
+    #main ul li .img-menu-sport {
+      background-image: url("../images/sport.png");
+      background-size: cover;
+      background-position: center;
+      width: 15rem;
+      height: 15rem; }
+    #main ul li .img-menu-vege {
+      background-image: url("../images/Vege.png");
+      background-size: cover;
+      background-position: center;
+      width: 15rem;
+      height: 15rem; }
+    #main ul li .img-menu-gluten {
+      background-image: url("../images/GlutenFree.png");
+      background-size: cover;
+      background-position: center;
+      width: 15rem;
+      height: 15rem; }
+    #main ul li .img-menu-lactose {
+      background-image: url("../images/LactoseFree.png");
+      background-size: cover;
+      background-position: center;
+      width: 15rem;
+      height: 15rem; }
+
+#main .select-kcal-meals {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem; }
+
+#main .select-2 {
+  width: 25rem;
+  font-size: 1.4rem;
+  position: relative;
+  z-index: 3; }
+
+#main .button-generate {
+  display: flex;
+  justify-content: center; }
+  #main .button-generate button {
+    margin-top: 5rem;
+    width: 24rem;
+    height: 5rem;
+    border-radius: 3rem;
+    background-color: #4eb5f1;
+    font-size: 2rem;
+    color: white;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    border: none;
+    position: absolute;
+    z-index: 3; }
+    #main .button-generate button:hover {
+      background-color: #1fa1ed;
+      cursor: pointer; }
+
+.daily-meals-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+  padding-bottom: 7rem;
+  position: relative;
+  top: -4.7rem;
+  background-color: white;
+  z-index: 2;
+  margin-bottom: 4rem; }
+  .daily-meals-container .daily-meals-tabel {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+    .daily-meals-container .daily-meals-tabel .generated-meal {
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 3rem 0;
+      height: 40rem;
+      background-color: rgba(245, 245, 245, 0.7);
+      border-radius: 0.4rem;
+      position: relative;
+      font-family: 'Kaushan Script', cursive;
+      -webkit-box-shadow: 0px 0px 5px 2px lightgray;
+      -moz-box-shadow: 0px 0px 5px 2px lightgray;
+      box-shadow: 0px 0px 5px 2px lightgray; }
+      .daily-meals-container .daily-meals-tabel .generated-meal .meal-title {
+        height: 4rem;
+        width: 70%;
+        border-radius: 0.8rem;
+        justify-items: center;
+        align-items: center;
+        font-size: 2.7rem;
+        margin-top: 1.7rem;
+        display: flex;
+        justify-content: center; }
+      .daily-meals-container .daily-meals-tabel .generated-meal .meals-content {
+        display: flex;
+        margin-top: 2.5rem;
+        justify-content: space-between;
+        align-items: center;
+        height: 22.5rem; }
+        .daily-meals-container .daily-meals-tabel .generated-meal .meals-content .meal-ingredients-box {
+          text-align: center;
+          margin-bottom: 3rem;
+          margin-top: 1rem;
+          font-size: 1.3rem;
+          width: 30%;
+          margin-left: 1rem;
+          line-height: 1.8rem; }
+          .daily-meals-container .daily-meals-tabel .generated-meal .meals-content .meal-ingredients-box .ingredients-title {
+            font-size: 1.7rem;
+            display: block;
+            margin-top: 2rem;
+            margin-bottom: 2rem; }
+        .daily-meals-container .daily-meals-tabel .generated-meal .meals-content .meal-recepie-box {
+          font-size: 1.7rem;
+          margin-right: 1rem; }
+          .daily-meals-container .daily-meals-tabel .generated-meal .meals-content .meal-recepie-box .recepie-title {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 1rem; }
+      .daily-meals-container .daily-meals-tabel .generated-meal .change-meal {
+        height: 3.3rem;
+        width: 13rem;
+        border-radius: 3rem;
+        background-color: #FF8C00;
+        font-size: 1.3rem;
+        color: white;
+        text-transform: uppercase;
+        transition: all 0.2s;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        margin-left: -7.5rem; }
+        .daily-meals-container .daily-meals-tabel .generated-meal .change-meal:hover {
+          background-color: #cc7000;
+          cursor: pointer; }
+      .daily-meals-container .daily-meals-tabel .generated-meal .meal-ingredients-box {
+        width: 40%; }
+      .daily-meals-container .daily-meals-tabel .generated-meal .meal-recepie-box {
+        width: 55%; }
